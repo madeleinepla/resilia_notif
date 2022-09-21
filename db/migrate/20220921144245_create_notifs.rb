@@ -1,0 +1,8 @@
+class CreateNotifs < ActiveRecord::Migration[5.2]
+  def change
+    create_table :notifs do |t|
+
+      t.timestamps
+    end
+  end
+end
