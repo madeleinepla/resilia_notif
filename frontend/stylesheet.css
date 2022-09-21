@@ -1,0 +1,25 @@
+:root {
+  --blue: #023f7e;
+  --brightgreen: #8edd44;
+  --green: #3dd866;
+
+}
+
+body {
+  background-color: var(--blue);
+  font-family: sans-serif;
+}
+
+.nav-bar{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.notif-page {
+  color: white;
+}
+
+.notif-page * {
+  list-style-type: none;
+}

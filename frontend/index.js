@@ -25,7 +25,8 @@ function displayNotif(notif) {
   // create notif
   const node = document.createElement("ul");
   list.appendChild(node);
-  node.classList.add(`seen-${notif.seen}`);
+  // node.classList.add(`seen-${notif.seen}`);
+  node.classList.add(`notif-item`);
   node.setAttribute('id',`${notif.id}`);
 
   // add title
