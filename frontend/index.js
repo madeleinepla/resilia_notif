@@ -2,21 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM content has loaded")
   
   let url = "http://localhost:3000/notifs"
-  fetch(url)
-    .then(resp => resp.json())
-    .then(data => data.forEach(notif => {
-      displayNotif(notif)
-    }))
 
-  // $.ajax({
-  //   url: url,
-  //   method: 'GET'
-  // })
-  //   .done(function (data) {
-  //     data.forEach(notif => {
-  //       displayNotif(notif)
-  //     })
-  //   });
+  $.ajax({
+    url: url,
+    method: 'GET'
+  })
+    .then(data => {
+      data.forEach(notif => {
+        displayNotif(notif)
+      })
+    });
 })
 
 function displayNotif(notif) {
@@ -25,7 +20,6 @@ function displayNotif(notif) {
   // create notif
   const node = document.createElement("ul");
   list.appendChild(node);
-  // node.classList.add(`seen-${notif.seen}`);
   node.classList.add(`notif-item`);
   node.setAttribute('id',`${notif.id}`);
 
@@ -44,18 +38,12 @@ function displayNotif(notif) {
   node.addEventListener('click', clickHandler, false);
 }
 
-const clickHandler = function (e) {
+const clickHandler = (e) => {
   const target = e.currentTarget
-  // debugger
-  // $.ajax({
-  //   url: `http://localhost:3000/notifs/${target.id}`,
-  //   method: 'DELETE',
-  // });
-  fetch(`http://localhost:3000/notifs/${target.id}`, {
+  $.ajax({
+    url: `http://localhost:3000/notifs/${target.id}`,
     method: 'DELETE',
   })
-    .then(res => res.text()) // or res.json()
     .then(res => window.location.reload())
 
-  
 };
