@@ -25,3 +25,9 @@ n3 = Notif.create!(
   body: 'Your paperwork was successfully filed. Here are the next steps...',
   seen: false
 )
+
+n4 = Notif.create!(
+  title: 'Fund request',
+  body: 'There are updates on your funding request. Click to see...',
+  seen: false
+)
