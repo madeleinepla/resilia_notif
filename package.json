@@ -1,5 +1,7 @@
 {
   "name": "resilia_notif",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }

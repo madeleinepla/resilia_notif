@@ -6,7 +6,7 @@ class NotifsController < ApplicationController
     # render :index
   end
 
-  def delete
+  def destroy
     @notif = Notif.find(params[:id])
     @notif.destroy
   end
