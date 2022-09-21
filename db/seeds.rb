@@ -9,19 +9,19 @@
 Notif.destroy_all
 
 n1 = Notif.create!(
-  title: 'title 1',
-  body: 'body 1',
+  title: 'You received a message!',
+  body: 'From: Mary - "Hi User, I wanted to get back to you about..."',
   seen: false
 )
 
 n2 = Notif.create!(
-  title: 'title 2',
-  body: 'body 2',
+  title: 'New Instuctional Video Available',
+  body: 'Your non-profit in your community',
   seen: false
 )
 
 n3 = Notif.create!(
-  title: 'title 3',
-  body: 'body 3',
+  title: 'Update',
+  body: 'Your paperwork was successfully filed. Here are the next steps...',
   seen: false
 )
