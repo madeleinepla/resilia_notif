@@ -54,5 +54,7 @@ const clickHandler = function (e) {
     method: 'DELETE',
   })
     .then(res => res.text()) // or res.json()
-    .then(res => console.log(res))
+    .then(res => window.location.reload())
+
+  
 };

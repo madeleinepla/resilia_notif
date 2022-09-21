@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Notif.destroy_all
-# ActiveRecord::Base.connection.reset_sequence!('notifs')
 
 n1 = Notif.create!(
   title: 'title 1',
