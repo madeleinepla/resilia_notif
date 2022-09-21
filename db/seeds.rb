@@ -15,8 +15,8 @@ n1 = Notif.create!(
 )
 
 n2 = Notif.create!(
-  title: 'New Instuctional Video Available',
-  body: 'Your non-profit in your community',
+  title: 'New Instructional Video Available',
+  body: 'Your non-profit in your community. How to make the most of...',
   seen: false
 )
 
