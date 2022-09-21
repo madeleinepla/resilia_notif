@@ -30,7 +30,7 @@ function displayNotif(notif) {
   node.setAttribute('id',`${notif.id}`);
 
   // add title
-  const titleNode = document.createElement("li");
+  const titleNode = document.createElement("h3");
   const titleText = document.createTextNode(`${notif.title}`);
   titleNode.appendChild(titleText)
   node.appendChild(titleNode);
