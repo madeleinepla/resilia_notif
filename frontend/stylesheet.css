@@ -20,6 +20,11 @@ body {
   color: white;
 }
 
-.notif-page * {
+#notif-list {
+  background-color: white;
+}
+
+.notif-item {
+  color: black;
   list-style-type: none;
 }
