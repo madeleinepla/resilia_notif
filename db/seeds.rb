@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Notif.destroy_all
+# ActiveRecord::Base.connection.reset_sequence!('notifs')
+
+n1 = Notif.create!(
+  title: 'title 1',
+  body: 'body 1',
+  seen: false
+)
+
+n2 = Notif.create!(
+  title: 'title 2',
+  body: 'body 2',
+  seen: false
+)
+
+n3 = Notif.create!(
+  title: 'title 3',
+  body: 'body 3',
+  seen: false
+)
