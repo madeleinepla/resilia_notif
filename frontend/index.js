@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM content has loaded")
   
-  let url = "http://localhost:3000/notifs"
+  fetchNotifs();
+})
+
+const fetchNotifs = () => {
+  const notifsIndex = "http://localhost:3000/notifs"
 
   $.ajax({
-    url: url,
+    url: notifsIndex,
     method: 'GET'
   })
     .then(data => {
@@ -12,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         displayNotif(notif)
       })
     });
-})
+}
 
-function displayNotif(notif) {
+const displayNotif = (notif) => {
   const list = document.querySelector("#notif-list")
   
   // create notif
